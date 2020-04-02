@@ -11,6 +11,8 @@
 
 #include <iostream>
 #include <string.h>
+#include <ostream>
+using namespace std;
 
 class Cheltuiala{
 private:
@@ -26,6 +28,13 @@ public:
     int getMoney();
     char* getType();
     void setDay(int a);
+    void setMoney(int a);
+    void setType(char* a);
+    Cheltuiala& operator=(const Cheltuiala& c);
+    bool operator==(const Cheltuiala& c);
+    
+    friend ostream& operator<<(ostream& os, const Cheltuiala& c);
+    
     
 
 };
